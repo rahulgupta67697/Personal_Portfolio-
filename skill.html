@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills - Personal Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .site-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: aqua;
+    color: #343a40;
+    font-family: Arial, sans-serif;
+}
+.site-footer:hover{
+    color: #b30054;
+
+}
+
+footer a {
+    margin: 0 10px;
+    color: #7f7fb4;
+    transition: color 0.3s ease;
+}
+footer-link:hover {
+    color: #b30054;
+    text-decoration: underline;
+}
+.footer-link {
+    text-decoration: none;
+    color: #ff0011;
+    
+}
+    :root {
+      --bg-color: #f4f4f4;
+      --text-color: #333;
+      --primary-color: #007bff;
+      --dark-bg-color: #333;
+      --dark-text-color: #e40909;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: var(--bg-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--text-color);
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: var(--primary-color);
+    }
+
+    .toggle-mode {
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-size: 18px;
+      color: var(--text-color);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 20px;
+    }
+
+    .skill {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+    }
+
+    .skill h2 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    .progress-bar {
+      background-color: #e0e0e0;
+      border-radius: 25px;
+      height: 10px;
+      margin: 15px 0;
+      overflow: hidden;
+    }
+
+    .progress {
+      height: 100%;
+      background-color: #4caf50;
+    }
+
+    .progress-section {
+      padding: 2rem 1rem;
+      background-color: #f9f9f9;
+    }
+
+    .circular-progress {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      background: conic-gradient(#4CAF50 0% 85%, #ddd 85% 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .circular-progress .progress-value {
+      position: absolute;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--bg-color);
+    }
+
+    footer a {
+      margin: 0 10px;
+      color: var(--primary-color);
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #0056b3;
+    }
+
+    /* Dark mode */
+    body.dark-mode {
+      --bg-color: var(--dark-bg-color);
+      --text-color: var(--dark-text-color);
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="download.jfif" alt="Portfolio Logo">
+      
+    </div>
+    <h1 style="text-align: left; color:rgb(255, 166, 0)">My Skills</h1>
+    <nav>
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="Aboutme.html">About</a></li>
+        <li><a href="skill.html">Skills</a></li>
+        <li><a href="sercive.html">My Services</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="certificate.html">Certificates</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="toggle-mode" id="toggle-button">&#9728;</button>
+  </header>
+
+  <section class="skills">
+    <div class="skill">
+      <h2>Web Development</h2>
+      <div class="progress-bar">
+        <div class="progress" style="width: 85%;"></div>
+      </div>
+      <p>Experience with HTML, CSS, JavaScript, React, and Node.js.</p>
+    </div>
+
+    <div class="skill">
+      <h2>Graphic Design</h2>
+      <div class="progress-bar">
+        <div class="progress" style="width: 75%;"></div>
+      </div>
+      <p>Proficient with tools like Adobe Photoshop, Illustrator, and Figma.</p>
+    </div>
+
+    <div class="skill">
+      <h2>Photography</h2>
+      <div class="progress-bar">
+        <div class="progress" style="width: 70%;"></div>
+      </div>
+      <p>Skilled in both portrait and landscape photography techniques.</p>
+    </div>
+
+    <div class="skill">
+      <h2>Content Writing</h2>
+      <div class="progress-bar">
+        <div class="progress" style="width: 90%;"></div>
+      </div>
+      <p>Experienced in writing blogs, articles, and SEO content.</p>
+    </div>
+  </section>
+
+  <section class="progress-section">
+    <h2>Team Performance:</h2><p>The concept of team performance refers to how effectively a group of individuals works together to achieve common goals. It is influenced by various factors such as communication, collaboration, individual skills, leadership, and the team's dynamics. Below are some key elements to assess and improve team performance:</p>
+    <div class="progress-container">
+      <div class="circular-progress" style="background: conic-gradient(#4CAF50 0% 85%, #ddd 85% 100%);">
+        <span class="progress-value">85%</span>
+      </div><br><br>
+      <h2>Team Collaboration:</h2><p>Team collaboration is the process of working together effectively to achieve shared goals by leveraging the unique skills, expertise, and ideas of all team members. It is a cornerstone of high-performing teams and directly impacts productivity, innovation, and overall success.
+
+      </p>
+      <div class="progress-container">
+        <div class="circular-progress" style="background: conic-gradient(#2196F3 0% 70%, #ddd 70% 100%);">
+          <span class="progress-value">70%</span>
+        </div><br><br>
+        <h2>Task Efficiency:</h2><p>Task efficiency refers to completing tasks with the least amount of time, resources, and effort while maintaining high-quality outcomes. It is a critical component of productivity, ensuring teams and individuals meet goals effectively and without unnecessary waste.</p>
+      </div>
+  
+      <div class="progress-container">
+        <div class="circular-progress" style="background: conic-gradient(#FFC107 0% 90%, #ddd 90% 100%);">
+          <span class="progress-value">90%</span>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; 2024 Rahul Kumar Gupta. All rights reserved.</p>
+    <p>Contact: <a href="tel:6393610151">Call</a> | <a href="mailto:rahulgupta67697@email.com">Email</a></p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/login/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.facebook.com/login/" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://in.linkedin.com/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/signup?source=form-home-signup&user_email=rahulgupta67697%40gmailcom" aria-label="GitHub"><i class="fab fa-github"></i></a>
+  </div>
+    <script>
+      const toggleButton = document.getElementById('toggle-button');
+      const body = document.body;
+
+      toggleButton.addEventListener('click', () => {
+          body.classList.toggle('dark-mode');
+          toggleButton.innerHTML = body.classList.contains('dark-mode') ? '&#9790;' : '&#9728;';
+      });
+  </script>
+</body>
+</html>
+
+    </div>
+  </section>
+</body>
+</html>

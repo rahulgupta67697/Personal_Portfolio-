@@ -1,0 +1,60 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  body.day {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  body.night {
+    background-color: #1e1e2f;
+    color: #ffffff;
+  }
+  
+  /* Toggle Switch Container */
+  .toggle-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .toggle {
+    display: none;
+  }
+  
+  /* Toggle Switch Style */
+  .toggle-label {
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-label::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Night Mode Active */
+  .toggle:checked + .toggle-label {
+    background-color: #4caf50;
+  }
+  
+  .toggle:checked + .toggle-label::after {
+    transform: translateX(25px);
+  }
+  

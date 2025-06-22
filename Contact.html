@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="download.jfif" alt="">
+        </div>
+        <h1 style="text-align: left; color:rgb(255, 166, 0)">Get In Touch</h1>
+    <nav>
+        <ul>
+           
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Aboutme.html">About</a></li>
+            <li><a href="skill.html">Skills</a></li>
+            <li><a href="sercive.html">My Services</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="certificate.html">Certificate</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <button class="toggle-mode" id="toggle-button">&#9728;</button>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <h2 style="text-align: center;">Contact Me</h2>
+        <form action="submit_form.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Submit <a href="Thank.html"></a></button>
+        </form>
+    </section>
+    <footer>
+       <p>&copy; 2024 Rahul Kumar Gupta. All rights reserved.</p>
+        <p>Contact: <a href="6393610151">Call</a> | <a href="rahulgupta67697@email.com">Email</a></p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/login/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.facebook.com/login/" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://in.linkedin.com/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/signup?source=form-home-signup&user_email=rahulgupta67697%40gmailcom" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+    <script>
+        const toggleButton = document.getElementById('toggle-button');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            toggleButton.innerHTML = body.classList.contains('dark-mode') ? '&#9790;' : '&#9728;';
+        });
+    </script>
+</body>
+</html>
